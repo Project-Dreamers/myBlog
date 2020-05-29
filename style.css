@@ -197,12 +197,13 @@ nav {
 }
 
 .head {
-    margin: -30px 0px 20px 6em;
+    margin: -30px 0px 20px 3em;
     grid-area: head;
     background-color: rgba(34, 29, 29, 0.815);
     border-radius: 5px;
     max-height: 90vh;
     max-width: 550px;
+    width: 80%;
     box-shadow: 10px 12px 10px rgba(7, 7, 6, 0.651);
     overflow: hidden;
 }
@@ -253,8 +254,8 @@ nav {
     box-shadow: 10px 12px 10px rgba(7, 7, 6, 0.651);
     border-radius: 5px;
     max-height: 350px;
-    max-width: 95%;
-    margin: 0px 20px 0px 5px;
+    max-width: 600px;
+    margin: 0;
 }
 
 .myName .profile-bg {
@@ -279,12 +280,13 @@ nav {
     background-color: rgba(68, 62, 62, 0.815);
     box-shadow: 10px 12px 10px rgba(7, 7, 6, 0.651);
     max-height: 50em;
-    max-width: 85%;
-    margin: -60px 20px 20px 5px;
+    max-width: 800px;
+    width: 60%;
+    margin: -60px 0px 20px 0px;
 }
 .popular .horse {
     position: absolute;
-    right: -7em;
+    right: -8em;
     top: 3em;
     max-height: 15em;
     opacity: 0.9;
@@ -327,8 +329,6 @@ nav {
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
-
-
 
 .gameSec {
     grid-area: gameSec;
@@ -382,6 +382,41 @@ nav {
     }
     .activeMenu {
         transform: translateY(40px);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .parallax-bg .main-title {
+        font-size: 40px;
+    }
+    .parallax-bg .sub-lines-0 {
+        font-size: 15px;
+    }
+    .logos img{
+        max-width: 6em;
+    }
+    .main-container {
+        display: block;
+        margin: 0;
+    }
+    .head {
+        margin-top: 8em;
+        max-width: 26em;
+        margin-left: 60px;
+    }
+    .myName {
+        max-width: 26em;
+        height: 50vh;
+        margin: 50px 0px 50px 60px;
+    }
+
+    .popular {
+        padding: 0;
+        max-width: 20em;
+        margin: 50px 0px 50px 70px;
+    }
+    .popular .horse {
+        right: -140px;
     }
 }
 

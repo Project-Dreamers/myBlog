@@ -14,6 +14,3 @@ $(window).scroll(function(){
 });
 
 
-
-
-
