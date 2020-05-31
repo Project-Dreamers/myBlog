@@ -5,6 +5,9 @@
 }
 body {
     background-color: rgb(27, 27, 23);
+    width: 100%;
+    height: 100%;
+    /* overflow-x: hidden; */
 }
 
 nav {
@@ -158,23 +161,20 @@ nav {
 
 .main-container {
     position: relative;
-    /* margin: 20px; */
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
         "logos logos"
         "head myName"
         "head myName"
         "head popular"
+        "comBg comBg"
         "gameSec gameSec"
         "contact contact"
         "footer footer"
     ;
-    grid-row-gap: 5px;
-    grid-column-gap: 5px;
-    
 }
 .logos {
     margin-top: 15px;
@@ -195,9 +195,8 @@ nav {
     margin: 0px 20px 0px 20px;
     filter: drop-shadow(15px 30px 15px black);
 }
-
 .head {
-    margin: -30px 0px 20px 3em;
+    margin: -50px 0px 20px 3em;
     grid-area: head;
     background-color: rgba(34, 29, 29, 0.815);
     border-radius: 5px;
@@ -214,12 +213,10 @@ nav {
     margin-left: -140px;
     left: 0;
     top: 5em;
-    opacity: 0.7;
+    opacity: 0.8;
     filter: drop-shadow(-30px 40px 20px black);
 }
-
 .head .bg {
-    
     background: linear-gradient(rgba(245, 4, 4, 0.445), rgba(61, 85, 61, 0.144)),url("img/wall2.jpeg");
     background-size: 100% 150px;
     background-repeat: no-repeat;
@@ -255,9 +252,8 @@ nav {
     border-radius: 5px;
     max-height: 350px;
     max-width: 600px;
-    margin: 0;
+    margin-top: 0px;
 }
-
 .myName .profile-bg {
     background: linear-gradient(rgba(241, 6, 6, 0),rgba(17, 4, 4, 0)),url('img/morning_mountain.jpeg');
     background-repeat: no-repeat;
@@ -266,7 +262,6 @@ nav {
     border-radius: 5px 5px 0px 0px;
     height: 20vh;
 }
-
 .myName .detail {
     font-family: 'Roboto', sans-serif;
     margin: 20px;
@@ -279,10 +274,10 @@ nav {
     grid-area: popular;
     background-color: rgba(68, 62, 62, 0.815);
     box-shadow: 10px 12px 10px rgba(7, 7, 6, 0.651);
-    max-height: 50em;
+    max-height: 16em;
     max-width: 800px;
     width: 60%;
-    margin: -60px 0px 20px 0px;
+    margin: -3em 0px 20px 0px;
 }
 .popular .horse {
     position: absolute;
@@ -295,20 +290,17 @@ nav {
     background-color: rgba(34, 29, 29, 0.815);
     height: 50px;
 }
-
 .popular .title h4 {
     padding: 10px;
     color: rgba(20, 211, 211, 0.966);
     font-family: 'Orbitron', sans-serif;
     font-size: 25px;
 }
-
 .popular .new-container {
     display: flex;
     border-bottom:1px solid rgba(255, 255, 255, 0.781);
     transition: 0.3s ease-in-out;
 }
-
 .new-container .box-1, .box-2 {
     flex: 1;
     width: 100%;
@@ -323,17 +315,321 @@ nav {
     width: 30%;
     opacity: 0.8;
 }
-
 .new-container:hover {
     background-color: rgba(59, 243, 243, 0.342);
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
 
+/* ****************** Comercial BG ****************** */
+
+.comBg {
+    grid-area: comBg;
+    position: relative;
+    background: linear-gradient(To top, rgb(0, 0, 0), rgba(0, 0, 0, 0.123)),url('img/wall6.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 25vh;
+    width: 100%;
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comBg h1 {
+    color: white;
+    font-size: 50px;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(190deg, rgb(252, 248, 1), rgba(7, 7, 7, 0.952));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* *********************** Game Section ***************** */
 .gameSec {
     grid-area: gameSec;
-    background-color: rgb(240, 8, 201);
+    position: relative;
+    height: 120vh;
+    margin: 0;
+    padding: 0;
 }
+
+.gameSec .gameSec-main {
+    text-align: center;
+    /* width: 100%; */
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;   
+    font-family: 'Orbitron', sans-serif;
+}
+
+.gameSec-main .box1, .box2, .box3, .box4, .box5, .box6  {
+    flex: 1;
+    border: 1px solid rgb(44, 43, 43);
+    box-shadow: 5px 15px 10px rgb(0, 0, 0);
+    color: white;
+    margin: 10px;
+    height: 50vh;
+    min-width: 300px;
+}
+.gameSec-main .topName {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    color: whitesmoke;
+}
+
+/* *********** box1 ************ */
+.gameSec-main .box1 .bg{
+    position: relative;
+    background: linear-gradient(to top,rgba(235, 12, 12, 0.3),rgba(24, 3, 3, 0.055)), url('img/bg/dbwall2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gameSec-main .box1 h1 {
+    background: linear-gradient(to bottom, rgba(211, 209, 209, 0.795)60%,rgb(148, 4, 4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+.gameSec-main .box1 p {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.gameSec-main .box1 a {
+    float: left;
+    text-decoration: none;
+    margin: 30px 10px 10px 10px ;
+    color: white;
+    border: 1px solid rgb(56, 54, 54);
+    padding: 10px;
+    box-shadow: 10px 15px 10px rgb(10, 10, 10);
+    font-size: 12px;
+    transition: 0.5s ease-in-out;
+}
+.gameSec-main .box1 a:hover {
+    background-color: rgba(118, 236, 225, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+/* ********* box2 *********** */
+.gameSec-main .box2 .bg{
+    position: relative;
+    background: linear-gradient(to top,rgba(14, 230, 14, 0.3),rgba(0, 0, 0, 0.288)), url('img/wall5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gameSec-main .box2 h1 {
+    background: linear-gradient(to bottom, rgb(211, 209, 209)60%,rgb(7, 134, 3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+.gameSec-main .box2 p {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.gameSec-main .box2 a {
+    float: left;
+    text-decoration: none;
+    margin: 30px 10px 10px 10px ;
+    color: white;
+    border: 1px solid rgb(56, 54, 54);
+    padding: 10px;
+    box-shadow: 10px 15px 10px rgb(10, 10, 10);
+    font-size: 12px;
+    transition: 0.5s ease-in-out;
+}
+.gameSec-main .box2 a:hover {
+    background-color: rgba(118, 236, 225, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+/* ********* box3 *********** */
+.gameSec-main .box3 .bg{
+    position: relative;
+    background: linear-gradient(to top,rgba(6, 213, 240, 0.36),rgba(24, 3, 3, 0.13)), url('img/bg/gowwall1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gameSec-main .box3 h1 {
+    background: linear-gradient(to bottom, rgb(211, 209, 209)50%,rgba(4, 207, 197, 0.959));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+.gameSec-main .box3 p {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.gameSec-main .box3 a {
+    float: left;
+    text-decoration: none;
+    margin: 30px 10px 10px 10px ;
+    color: white;
+    border: 1px solid rgb(56, 54, 54);
+    padding: 10px;
+    box-shadow: 10px 15px 10px rgb(10, 10, 10);
+    font-size: 12px;
+    transition: 0.5s ease-in-out;
+}
+.gameSec-main .box3 a:hover {
+    background-color: rgba(118, 236, 225, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+/* ********* box4 *********** */
+.gameSec-main .box4 .bg{
+    position: relative;
+    background: linear-gradient(to top,rgba(78, 77, 77, 0.747),rgba(0, 0, 0, 0.123)), url('img/wall6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gameSec-main .box4 h1 {
+    background: linear-gradient(to bottom, rgb(211, 209, 209)50%,rgba(60, 60, 61, 0.959));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+.gameSec-main .box4 p {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.gameSec-main .box4 a {
+    float: left;
+    text-decoration: none;
+    margin: 30px 10px 10px 10px ;
+    color: white;
+    border: 1px solid rgb(56, 54, 54);
+    padding: 10px;
+    box-shadow: 10px 15px 10px rgb(10, 10, 10);
+    font-size: 12px;
+    transition: 0.5s ease-in-out;
+}
+.gameSec-main .box4 a:hover {
+    background-color: rgba(118, 236, 225, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+/* ********* box5 *********** */
+.gameSec-main .box5 .bg{
+    position: relative;
+    background: linear-gradient(to top,rgba(4, 150, 247, 0.153),rgba(0, 0, 0, 0.082)), url('img/bg/scwall3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gameSec-main .box5 h1 {
+    background: linear-gradient(to top, rgb(5, 167, 189)10%,rgba(255, 253, 253, 0.959)60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+.gameSec-main .box5 p {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.gameSec-main .box5 a {
+    float: left;
+    text-decoration: none;
+    margin: 30px 10px 10px 10px ;
+    color: white;
+    border: 1px solid rgb(56, 54, 54);
+    padding: 10px;
+    box-shadow: 10px 15px 10px rgb(10, 10, 10);
+    font-size: 12px;
+    transition: 0.5s ease-in-out;
+}
+.gameSec-main .box5 a:hover {
+    background-color: rgba(118, 236, 225, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+/* ********* box6 *********** */
+.gameSec-main .box6 .bg{
+    position: relative;
+    background: linear-gradient(to top,rgba(199, 4, 248, 0.288),rgba(14, 2, 2, 0)), url('img/bg/tlwall1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameSec-main .box6 h1 {
+    background: linear-gradient(to bottom, rgb(252, 228, 12),rgba(221, 25, 25, 0.658));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gameSec-main .box6 p {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.gameSec-main .box6 a {
+    float: left;
+    text-decoration: none;
+    margin: 30px 10px 10px 10px ;
+    color: white;
+    border: 1px solid rgb(56, 54, 54);
+    padding: 10px;
+    box-shadow: 10px 15px 10px rgb(10, 10, 10);
+    font-size: 12px;
+    transition: 0.5s ease-in-out;
+}
+.gameSec-main .box6 a:hover {
+    background-color: rgba(118, 236, 225, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
 .contact {
     grid-area: contact;
     background-color: rgb(247, 4, 4);
@@ -420,6 +716,53 @@ nav {
     }
 }
 
+@media only screen and (max-width:360px) {
+    .logo {
+        display: none;
+    }
+    .parallax-bg {
+        height: 100vh;
+    }
+    .main-container {
+        width: 95%;
+    }   
+    .logos img {
+        max-width: 60px;
+        margin: 0px 10px 0px 10px;
+    }
+    .head {
+        max-width: 100%;
+        min-height: 130vh;
+    }
+    .myName {
+        min-height: 60vh;
+    }
+    .popular {
+        position: relative;
+        padding: 0;
+        margin-left: 5px;
+        min-width: 350px ;
+    }
+    .popular .horse {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 5em;
+    }
+    .comBg {
+        background-size: 100% 100%;
+        background-position: center;
+        margin-left: 10px;
+        width: 100%;
+    }
+    .comBg h1 {
+        font-size: 25px;
+    }
+    .gameSec {
+        height: 350vh;
+    }
+}
+
 .toggleLine .line1 {
     transform: rotate(-35deg) translate(-4px, 5px); 
 }
@@ -433,7 +776,7 @@ nav {
 }
 
 .scrolled {
-    background-color:rgba(13, 230, 238, 0.3);
+    background-color:rgba(36, 37, 37, 0.9);
     /* background: linear-gradient(to top, rgba(0, 0, 0, 0.11)10%, rgba(13, 230, 238, 0.545)); */
     border-top: 1px solid black;
     height: 10vh;
@@ -449,4 +792,4 @@ nav {
     -webkit-box-shadow: inset 7px 2px 10px rgba(13, 230, 238, 0.3);
 }
 
- 
+
